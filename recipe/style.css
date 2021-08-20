@@ -2,6 +2,7 @@
   --main-heading-color: #000000;
   --subheading-color: #333333;
   --muted-color: #bdbdbd;
+  --accent-color: #f2994a;
 
   --heading-font: "Playfair Display", serif;
   --body-font: "Montserrat", sans-serif;
@@ -19,6 +20,7 @@ html {
 }
 body {
   font-family: var(--body-font);
+  min-height: 100vh;
 }
 h1,
 h2,
@@ -32,7 +34,6 @@ ul {
 .container {
   max-width: 1100px;
   width: 100%;
-  height: 100vh;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -63,8 +64,102 @@ header {
   width: 100%;
   object-fit: cover;
 }
+.material-icons {
+  font-size: 2rem;
+}
+.icon-accent {
+  color: var(--accent-color);
+}
+.icon-muted {
+  color: #4f4f4f;
+}
+.mini__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.mini__title {
+  color: #bdbdbd;
+  font-size: 10px;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+.serving {
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: 14px;
+}
+.mini__info {
+  display: flex;
+}
+.jc-b {
+  justify-content: space-between;
+}
+.time {
+  color: var(--subheading-color);
+}
+/* =============================== INGG ====================================*/
 
+.section-heading {
+  font-family: var(--heading-font);
+  color: var(--subheading-color);
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+.item-title {
+  font-family: var(--heading-font);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--subheading-color);
+  margin-bottom: 1.5rem;
+}
+li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+.highlighted-text {
+  font-weight: 700;
+}
+.detail-item {
+  margin-bottom: 2.5rem;
+}
+.instructions-title {
+  font-family: var(--heading-font);
+  color: var(--subheading-color);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.instruction {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.count {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  font-weight: 700;
+}
+.instruction__description {
+  font-size: 1rem;
+  line-height: 1.8;
+}
 @media screen and (min-width: 768px) {
+  header {
+    margin-bottom: 3rem;
+  }
   .header__title {
     font-size: 3rem;
   }
@@ -72,5 +167,27 @@ header {
     font-size: 1rem;
     max-width: 592px;
     margin-bottom: 2rem;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 15rem;
+  }
+  .mini {
+    order: 2;
+    padding: 3.75rem;
+  }
+  .three-items {
+    flex-direction: column;
+  }
+  .section-heading {
+    font-size: 1.5rem;
+  }
+  .item-title {
+    font-size: 1.125rem;
+  }
+  li {
+    font-size: 1rem;
+    margin-bottom: 1rem;
   }
 }
